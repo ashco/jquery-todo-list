@@ -1,6 +1,6 @@
 var submitButton_e = $('#submitButton');
 var userInput_e = $('.userInput');
-var deleteButton_e = $('.deleteCheck');
+var listLi = $('.item');
 var newToDo
 var itemCount = 3;
 var newListItem
@@ -19,7 +19,7 @@ var newItem = function(){
 
 //create list item 
 var createListItem = function(){
-	newListItem = ('<li class="item' + itemCount + '"><span class="listTextSpan">' + newToDo + '</span><span class="checkBoxSpan"><input class="item' + itemCount + '" class="deleteCheck" type="checkbox"></span></li>');
+	newListItem = ('<li class="item"><span class=listTextSpan">' + newToDo + '</span></li>');
 }
 
 // button function works
@@ -32,6 +32,6 @@ $(submitButton_e).click(function(){
 })
 
 //Delete button logic
-// $('.deleteCheck').click(function(){
-// 	console.log('hi');
-// });
+$(listLi).click(function(){
+	this.remove();
+});
