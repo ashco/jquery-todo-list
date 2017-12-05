@@ -19,7 +19,7 @@ var newItem = function(){
 
 //create list item 
 var createListItem = function(){
-	newListItem = ('<li id="item' + itemCount + '">' + newToDo + '<input id="deleteBox' + itemCount + '" class="deleteButton" type="checkbox"></li>');
+	newListItem = ('<li class="item' + itemCount + '"><span class="listTextSpan">' + newToDo + '</span><span class="checkBoxSpan"><input class="item' + itemCount + '" class="deleteCheck" type="checkbox"></span></li>');
 }
 
 // button function works
@@ -32,8 +32,6 @@ $(submitButton_e).click(function(){
 })
 
 //Delete button logic
-$(deleteButton_e).click(function(){
-	$(this).find('.item3').remove();
-	// console.log('hi');
-})
-
+// $('.deleteCheck').click(function(){
+// 	console.log('hi');
+// });
