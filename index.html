@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <title>jQuery To Do List</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div id="container">
+		<div id="addBox">
+	  		<input type="text" class="userInput" placeholder="What do you want to do?"></input><button type="button" id="submitButton">+</button>
+  		</div>
+	  	<ol id="list">
+	  		<li class="item1">
+	  			<span class="listTextSpan">Item 1</span>
+	  			<span class="checkBoxSpan"><input class="item1" class="deleteCheck" type="checkbox"></span>
+	  		</li>
+	  		<li class="item2">
+	  			<span class="listTextSpan">Item 2</span>
+	  			<span class="checkBoxSpan"><input class="item2" class="deleteCheck" type="checkbox"></span>
+	  		</li>
+	  		<li class="item3">
+	  			<span class="listTextSpan">Item 3</span>
+	  			<span class="checkBoxSpan"><input class="item3" class="deleteCheck" type="checkbox"></span>
+	  		</li>
+		</ol>
+	</div>
 </body>
+<script type="text/javascript" src="js/logic.js"></script>
 </html>
