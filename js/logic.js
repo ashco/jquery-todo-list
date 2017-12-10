@@ -1,5 +1,4 @@
 var newToDo
-var itemCount = 3;
 var newListItem
 
 // click to submit entry
@@ -13,17 +12,14 @@ $(document).keypress(function(enter) {
 
 //actions that occur to add item to list
 function submit(){
-  itemCountCalc();
   newItem();
-  createListItem();
-  $('ol').append(newListItem);
-  $('.userInput').val([]);
-  addDeleteListener();
-}
-
-//iterate item count
-function itemCountCalc(){
-  itemCount++;
+  //only add 1+ char strings
+  if(newToDo.length > 0){
+    createListItem();
+    $('ol').append(newListItem);
+    $('.userInput').val([]);
+    addDeleteListener();
+  }
 }
 
 //add user input to newToDo variable
@@ -33,7 +29,7 @@ function newItem(){
 
 //create list item 
 function createListItem(){
-  newListItem = ('<li class="item"><span class=listTextSpan">' + newToDo + '</span></li>');
+  newListItem = ('<li class="item"><span class="listTextSpan">' + newToDo + '</span></li>');
 }
 
 //Delete button logic

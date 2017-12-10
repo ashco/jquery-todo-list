@@ -1,7 +1,7 @@
 body {
 	text-align: center;
-	/*background: url(/img/background.jpg);*/
 	background: #333;
+	font-style: Arial, Helvetica, sans-serif;
 }
 
 #container {
@@ -37,7 +37,7 @@ button {
 	right: 10px;
 	display: inline;
 	font-size: 24px;
-	margin: 5px 0;
+	margin: 3px 0;
 }
 
 ol {
@@ -55,22 +55,11 @@ li {
 	background-color: #fff;
 }
 
-/*.listTextSpan {
-	position: absolute;
-	width: 220px;
-	height: 28px;
-	font-size: 20px;
-	left: 203px;
-	text-align: left;
-	margin: 3px;
-	padding: 6px 10px 0 10px;
-}*/
+.listTextSpan {
+	position: relative;
+	left: 10px;
+	top: 11px;
+	display: flex;
+	justify-content: flex-start;
+}
 
-/*.checkBoxSpan {
-	position: absolute;
-	left: 452px;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	padding: 9px;
-	border-radius: 3px;
-}*/
