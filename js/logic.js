@@ -1,37 +1,46 @@
-var submitButton_e = $('#submitButton');
-var userInput_e = $('.userInput');
-var listLi = $('.item');
 var newToDo
 var itemCount = 3;
 var newListItem
 
+// click to submit entry
+$('#submitButton').click(submit);
+// enter to submit entry
+$(document).keypress(function(enter) {
+    if(enter.which == 13) {
+        submit();
+    }
+});
 
-//iterate item count
-var itemCountCalc = function(){
-	itemCount++;
+//actions that occur to add item to list
+function submit(){
+  itemCountCalc();
+  newItem();
+  createListItem();
+  $('ol').append(newListItem);
+  $('.userInput').val([]);
+  addDeleteListener();
 }
 
-//recognize input value
-//add it to newToDo variable
-var newItem = function(){
-	newToDo = $(userInput_e).val();
+//iterate item count
+function itemCountCalc(){
+  itemCount++;
+}
+
+//add user input to newToDo variable
+function newItem(){
+  newToDo = $('.userInput').val();
 }
 
 //create list item 
-var createListItem = function(){
-	newListItem = ('<li class="item"><span class=listTextSpan">' + newToDo + '</span></li>');
+function createListItem(){
+  newListItem = ('<li class="item"><span class=listTextSpan">' + newToDo + '</span></li>');
 }
 
-// button function works
-$(submitButton_e).click(function(){
-	itemCountCalc();
-	newItem();
-	createListItem();
-	$('ol').append(newListItem);
-	$(userInput_e).val([]);
-})
-
 //Delete button logic
-$(listLi).click(function(){
-	this.remove();
-});
+function addDeleteListener(){
+  $('.item').click(function(){
+    this.remove();
+  });
+}
+
+addDeleteListener();

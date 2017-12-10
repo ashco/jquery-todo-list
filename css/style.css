@@ -1,6 +1,7 @@
 body {
 	text-align: center;
-	background: url(/img/background.jpg);
+	/*background: url(/img/background.jpg);*/
+	background: #333;
 }
 
 #container {
@@ -22,9 +23,10 @@ body {
 .userInput {
 	position: absolute;
 	height: 40px;
-	width: 225px;
+	width: 205px;
 	left: 0px;
 	margin: 0 10px;
+	padding: 0 10px;
 }
 
 button {
@@ -53,7 +55,7 @@ li {
 	background-color: #fff;
 }
 
-.listTextSpan {
+/*.listTextSpan {
 	position: absolute;
 	width: 220px;
 	height: 28px;
@@ -62,7 +64,7 @@ li {
 	text-align: left;
 	margin: 3px;
 	padding: 6px 10px 0 10px;
-}
+}*/
 
 /*.checkBoxSpan {
 	position: absolute;
